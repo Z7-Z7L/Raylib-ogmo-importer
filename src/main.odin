@@ -1,3 +1,5 @@
+/*** Example ***/
+
 package Ogmo
 
 import rl "vendor:raylib"
@@ -5,13 +7,14 @@ import "core:fmt"
 
 SCREEN_WIDTH, SCREEN_HEIGHT :: 1280, 720;
 
+
 main :: proc() {
   // Initialization
   rl.InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Game");
 
   rl.SetTargetFPS(60);
 
-  _map, err := Create_Map("./res/testmap.json", "./test.ogmo");
+  _map, err := Create_Map("./res/testmap.json", "./res/test.ogmo");
   
   tile_width  := _map.layers[0].gridCellWidth;
   tile_height := _map.layers[0].gridCellHeight;
